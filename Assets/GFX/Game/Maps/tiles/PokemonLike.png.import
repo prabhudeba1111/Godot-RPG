@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n75ma6vtgg1n"
-path="res://.godot/imported/PokemonLike.png-d0db1131bb2622cb8b85873e0f508c69.ctex"
+path="res://.godot/imported/PokemonLike.png-017dd0990fc040e5e7437ceb6f7178e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Game/Maps/tiles/PokemonLike.png"
-dest_files=["res://.godot/imported/PokemonLike.png-d0db1131bb2622cb8b85873e0f508c69.ctex"]
+source_file="res://Assets/GFX/Game/Maps/Tiles/PokemonLike.png"
+dest_files=["res://.godot/imported/PokemonLike.png-017dd0990fc040e5e7437ceb6f7178e0.ctex"]
 
 [params]
 

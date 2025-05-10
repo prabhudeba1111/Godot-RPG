@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d21rcciquinxb"
-path="res://.godot/imported/Untitled-0_3.png-fd5ff4a946ce9b1e619cb00e0e86a072.ctex"
+path="res://.godot/imported/Untitled-0_3.png-e13a2bbebd1a39859f309399af9b79eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Game/Maps/entities/player/Idle/Untitled-0_3.png"
-dest_files=["res://.godot/imported/Untitled-0_3.png-fd5ff4a946ce9b1e619cb00e0e86a072.ctex"]
+source_file="res://Assets/GFX/Game/Maps/Entities/Player/Idle/Untitled-0_3.png"
+dest_files=["res://.godot/imported/Untitled-0_3.png-e13a2bbebd1a39859f309399af9b79eb.ctex"]
 
 [params]
 

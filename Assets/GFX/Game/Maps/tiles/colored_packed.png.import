@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://y0l40kywags2"
-path="res://.godot/imported/colored_packed.png-4b23e5be74310bfb88064fce74854df3.ctex"
+path="res://.godot/imported/colored_packed.png-701f24d0b8f9e8c248beb3b75a8c91f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Game/Maps/tiles/colored_packed.png"
-dest_files=["res://.godot/imported/colored_packed.png-4b23e5be74310bfb88064fce74854df3.ctex"]
+source_file="res://Assets/GFX/Game/Maps/Tiles/colored_packed.png"
+dest_files=["res://.godot/imported/colored_packed.png-701f24d0b8f9e8c248beb3b75a8c91f2.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://do87hv63xptke"
-path="res://.godot/imported/16x16 tiles.png-f07fd6ccf915577b18aabfa2cfd6b045.ctex"
+path="res://.godot/imported/16x16 tiles.png-1f71d0246b30f65d79862b79d9257ff2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Game/Maps/tiles/16x16 tiles.png"
-dest_files=["res://.godot/imported/16x16 tiles.png-f07fd6ccf915577b18aabfa2cfd6b045.ctex"]
+source_file="res://Assets/GFX/Game/Maps/Tiles/16x16 tiles.png"
+dest_files=["res://.godot/imported/16x16 tiles.png-1f71d0246b30f65d79862b79d9257ff2.ctex"]
 
 [params]
 

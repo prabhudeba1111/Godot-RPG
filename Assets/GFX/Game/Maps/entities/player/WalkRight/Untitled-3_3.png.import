@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byqc5gd0r2ija"
-path="res://.godot/imported/Untitled-3_3.png-5a3973d845b30647ca3eeb3faec3eaf1.ctex"
+path="res://.godot/imported/Untitled-3_3.png-66dee5f5787dd2222e580836fbcaf31a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Game/Maps/entities/player/WalkRight/Untitled-3_3.png"
-dest_files=["res://.godot/imported/Untitled-3_3.png-5a3973d845b30647ca3eeb3faec3eaf1.ctex"]
+source_file="res://Assets/GFX/Game/Maps/Entities/Player/WalkRight/Untitled-3_3.png"
+dest_files=["res://.godot/imported/Untitled-3_3.png-66dee5f5787dd2222e580836fbcaf31a.ctex"]
 
 [params]
 

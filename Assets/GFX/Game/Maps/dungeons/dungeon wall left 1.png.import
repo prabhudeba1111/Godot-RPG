@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1c71jem3o2n7"
-path="res://.godot/imported/dungeon wall left 1.png-d951e1dcb3d0bfd82002e2edd23ce955.ctex"
+path="res://.godot/imported/dungeon wall left 1.png-d428bf09f774f422575b06317c0a611b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Game/Maps/dungeons/dungeon wall left 1.png"
-dest_files=["res://.godot/imported/dungeon wall left 1.png-d951e1dcb3d0bfd82002e2edd23ce955.ctex"]
+source_file="res://Assets/GFX/Game/Maps/Dungeons/dungeon wall left 1.png"
+dest_files=["res://.godot/imported/dungeon wall left 1.png-d428bf09f774f422575b06317c0a611b.ctex"]
 
 [params]
 

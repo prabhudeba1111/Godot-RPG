@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnub4tg523uqt"
-path="res://.godot/imported/chest.png-336b78772e8242fa8e72a06a55aad04c.ctex"
+path="res://.godot/imported/chest.png-a1b4b5449d34cd0c1ab2aa8b8763139b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Game/Maps/dungeons/objects/chest.png"
-dest_files=["res://.godot/imported/chest.png-336b78772e8242fa8e72a06a55aad04c.ctex"]
+source_file="res://Assets/GFX/Game/Maps/Dungeons/objects/chest.png"
+dest_files=["res://.godot/imported/chest.png-a1b4b5449d34cd0c1ab2aa8b8763139b.ctex"]
 
 [params]
 
