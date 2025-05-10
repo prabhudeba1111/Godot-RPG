@@ -7,5 +7,4 @@ func _init() -> void:
 
 
 func execute() -> void:
-	print("Player passed.")
 	command_processed.emit(commandLabel)

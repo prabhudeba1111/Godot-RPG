@@ -1,5 +1,5 @@
 class_name Map2d
-extends TileMapLayer
+extends Map
 
 func _ready() -> void:
 	print(get_terrain_data_for_tile(0, "TerrainType", 6, 6))
