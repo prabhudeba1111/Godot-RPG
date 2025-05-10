@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bj4orh2ii1frn"]
 
-[ext_resource type="Script" uid="uid://dfge6tuyfa4uh" path="res://Scripts/Game/game_screen.gd" id="1_aij3n"]
+[ext_resource type="Script" uid="uid://dfge6tuyfa4uh" path="res://Scripts/Game/game_screen.gd" id="1_kye4h"]
 
 [node name="Game" type="Node" node_paths=PackedStringArray("map")]
-script = ExtResource("1_aij3n")
+script = ExtResource("1_kye4h")
 map = NodePath("Map")
 
 [node name="Map" type="Node" parent="."]
