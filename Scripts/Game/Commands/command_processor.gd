@@ -24,6 +24,7 @@ func _process_command(command :Command):
 func _wait_for_command():
 	resumeWaiting = true
 	start()
+	CommandDispatcher.display_command_prompt.emit()
 
 
 func _pause_processor():

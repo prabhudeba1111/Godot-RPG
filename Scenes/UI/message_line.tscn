@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://div5kv58e5jau"]
+
+[ext_resource type="Theme" uid="uid://cwsatabd3umal" path="res://Themes/default_theme.tres" id="1_2icn4"]
+
+[node name="MessageLine" type="RichTextLabel"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_2icn4")
+text = "Enter Command: 
+
+"
+fit_content = true
+scroll_active = false

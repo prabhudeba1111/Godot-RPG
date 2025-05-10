@@ -3,7 +3,7 @@ extends Command
 
 
 func _init() -> void:
-	commandLabel = "pass"
+	commandLabel = "Pass"
 
 
 func execute() -> void:

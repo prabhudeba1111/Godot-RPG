@@ -1,16 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj4orh2ii1frn"]
+[gd_scene load_steps=6 format=3 uid="uid://bj4orh2ii1frn"]
 
 [ext_resource type="Script" uid="uid://dfge6tuyfa4uh" path="res://Scripts/Game/game_screen.gd" id="1_kye4h"]
 [ext_resource type="Script" uid="uid://b0ths3g6l3snx" path="res://Scripts/Game/Commands/command_processor.gd" id="2_3nf1g"]
 [ext_resource type="Texture2D" uid="uid://cjcs23cvy6owv" path="res://Assets/GFX/UI/main_frame.png" id="2_boosj"]
 [ext_resource type="FontFile" uid="uid://cxsdfwyre6pgl" path="res://Assets/Fonts/alagard_by_pix3m-d6awiwp.ttf" id="3_3nf1g"]
+[ext_resource type="Script" uid="uid://b76jj4hx82rsp" path="res://Scripts/UI/BottomDisplay/bottom_display.gd" id="5_w6uax"]
 
 [node name="Game" type="Node" node_paths=PackedStringArray("map")]
 script = ExtResource("1_kye4h")
 map = NodePath("Map")
 
 [node name="CommandProcessor" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 5.0
 autostart = true
 script = ExtResource("2_3nf1g")
 
@@ -24,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="UI"]
+[node name="BackGroundFrame" type="TextureRect" parent="UI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,20 +35,50 @@ grow_vertical = 2
 texture = ExtResource("2_boosj")
 stretch_mode = 2
 
-[node name="LeftPanel" type="VBoxContainer" parent="UI"]
+[node name="LeftDisplay" type="MarginContainer" parent="UI"]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 14.0
 offset_right = 118.0
 offset_bottom = 250.0
 
-[node name="CommandMenu" type="VBoxContainer" parent="UI/LeftPanel"]
+[node name="BackGround" type="ColorRect" parent="UI/LeftDisplay"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 
-[node name="PassButton" type="Button" parent="UI/LeftPanel/CommandMenu"]
+[node name="Contents" type="VBoxContainer" parent="UI/LeftDisplay"]
+layout_mode = 2
+
+[node name="CommandMenu" type="VBoxContainer" parent="UI/LeftDisplay/Contents"]
+layout_mode = 2
+
+[node name="PassButton" type="Button" parent="UI/LeftDisplay/Contents/CommandMenu"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_3nf1g")
 text = "Pass"
 
+[node name="BottomDisplay" type="MarginContainer" parent="UI" node_paths=PackedStringArray("scroll_container", "messages")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 265.0
+offset_right = 627.0
+offset_bottom = 345.0
+script = ExtResource("5_w6uax")
+scroll_container = NodePath("ScrollContainer")
+messages = NodePath("ScrollContainer/Messages")
+
+[node name="BackGround" type="ColorRect" parent="UI/BottomDisplay"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/BottomDisplay"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Messages" type="VBoxContainer" parent="UI/BottomDisplay/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="broadcast_command" from="CommandProcessor" to="UI/BottomDisplay" method="_on_command"]
 [connection signal="timeout" from="CommandProcessor" to="CommandProcessor" method="_on_timeout"]
-[connection signal="pressed" from="UI/LeftPanel/CommandMenu/PassButton" to="." method="_on_pass_button_pressed"]
+[connection signal="pressed" from="UI/LeftDisplay/Contents/CommandMenu/PassButton" to="." method="_on_pass_button_pressed"]

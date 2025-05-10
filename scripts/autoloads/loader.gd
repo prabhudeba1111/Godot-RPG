@@ -17,6 +17,8 @@ func _process(delta: float) -> void:
 		var progress :Array[float] = []
 		var loaderStatus = ResourceLoader.load_threaded_get_status(scenePath, progress)
 		
+		loading_progress.emit(progress[0])
+		
 		if loaderStatus == ResourceLoader.THREAD_LOAD_LOADED:
 			var loadedScene = ResourceLoader.load_threaded_get(scenePath).instantiate()
 			
@@ -24,7 +26,3 @@ func _process(delta: float) -> void:
 			get_tree().root.add_child(loadedScene)
 			
 			scenePath = null
-		
-		elif loaderStatus == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
-			loading_progress.emit(progress[0])
-		
