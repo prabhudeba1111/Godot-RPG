@@ -1,21 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://bj4orh2ii1frn"]
+[gd_scene load_steps=7 format=3 uid="uid://bj4orh2ii1frn"]
 
 [ext_resource type="Script" uid="uid://dfge6tuyfa4uh" path="res://Scripts/Game/game_screen.gd" id="1_kye4h"]
 [ext_resource type="Script" uid="uid://b0ths3g6l3snx" path="res://Scripts/Game/Commands/command_processor.gd" id="2_3nf1g"]
 [ext_resource type="Texture2D" uid="uid://cjcs23cvy6owv" path="res://Assets/GFX/UI/main_frame.png" id="2_boosj"]
+[ext_resource type="Script" uid="uid://tmqpgbexhlqv" path="res://Scripts/Game/Maps/map_container.gd" id="3_2aihf"]
 [ext_resource type="FontFile" uid="uid://cxsdfwyre6pgl" path="res://Assets/Fonts/alagard_by_pix3m-d6awiwp.ttf" id="3_3nf1g"]
 [ext_resource type="Script" uid="uid://b76jj4hx82rsp" path="res://Scripts/UI/BottomDisplay/bottom_display.gd" id="5_w6uax"]
 
 [node name="Game" type="Node" node_paths=PackedStringArray("map")]
 script = ExtResource("1_kye4h")
-map = NodePath("Map")
+map = NodePath("MapContainer")
 
 [node name="CommandProcessor" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
 script = ExtResource("2_3nf1g")
 
-[node name="Map" type="Node" parent="."]
+[node name="MapContainer" type="Node" parent="." node_paths=PackedStringArray("entities")]
+script = ExtResource("3_2aihf")
+entities = NodePath("Entities")
+
+[node name="Entities" type="Node" parent="MapContainer"]
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3

@@ -1,0 +1,143 @@
+[gd_scene load_steps=21 format=3 uid="uid://ditrjvwlufaee"]
+
+[ext_resource type="Script" uid="uid://0q62xv56ji0b" path="res://Scripts/Game/Entities/mob.gd" id="1_epucs"]
+[ext_resource type="Texture2D" uid="uid://byx166hd5b3as" path="res://Assets/GFX/Game/Maps/Entities/Player/Idle/Untitled-0_0.png" id="1_mrie1"]
+[ext_resource type="Texture2D" uid="uid://gm5dhmls0klm" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkLeft/Untitled-3_0.png" id="2_epucs"]
+[ext_resource type="Texture2D" uid="uid://cio1xyswbao5j" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkRight/Untitled-3_0.png" id="3_m2j71"]
+[ext_resource type="Texture2D" uid="uid://vu0jihe8b75u" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkUp/Untitled-2_1.png" id="4_mmvho"]
+[ext_resource type="Texture2D" uid="uid://puqpn3m0ejv1" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkDown/Untitled-2_0.png" id="5_d6jx0"]
+[ext_resource type="Texture2D" uid="uid://bel7ltrdmhvx3" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkDown/Untitled-2_1.png" id="6_ihuqq"]
+[ext_resource type="Texture2D" uid="uid://bvallk0cswtnq" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkDown/Untitled-2_2.png" id="7_fgldo"]
+[ext_resource type="Texture2D" uid="uid://b4ptv7ts0nlhu" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkDown/Untitled-2_3.png" id="8_q1iyc"]
+[ext_resource type="Texture2D" uid="uid://ddw1m0c2pby4c" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkLeft/Untitled-3_1.png" id="9_d2jgo"]
+[ext_resource type="Texture2D" uid="uid://brsuvqye8vfji" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkLeft/Untitled-3_2.png" id="10_fjg2e"]
+[ext_resource type="Texture2D" uid="uid://cnnbbvgvnprqv" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkLeft/Untitled-3_3.png" id="11_8s6nl"]
+[ext_resource type="Texture2D" uid="uid://by38ifhhoq0iv" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkRight/Untitled-3_1.png" id="12_pal2e"]
+[ext_resource type="Texture2D" uid="uid://cooxpasywe0a6" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkRight/Untitled-3_2.png" id="13_yj7b3"]
+[ext_resource type="Texture2D" uid="uid://byqc5gd0r2ija" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkRight/Untitled-3_3.png" id="14_5nptd"]
+[ext_resource type="Texture2D" uid="uid://svg30tifp74r" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkUp/Untitled-2_0.png" id="15_tcj81"]
+[ext_resource type="Texture2D" uid="uid://cpw3bdg07t8s7" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkUp/Untitled-2_2.png" id="16_nlhmx"]
+[ext_resource type="Texture2D" uid="uid://b2068kd1mmpsh" path="res://Assets/GFX/Game/Maps/Entities/Player/WalkUp/Untitled-2_3.png" id="17_vwtkw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0k63"]
+atlas = ExtResource("1_mrie1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e6uy3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0k63")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_epucs")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_m2j71")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mmvho")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_d6jx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ihuqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fgldo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q1iyc")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_epucs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d2jgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fjg2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8s6nl")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_m2j71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pal2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yj7b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5nptd")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_tcj81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mmvho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nlhmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vwtkw")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[node name="Mob" type="Node2D"]
+script = ExtResource("1_epucs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_e6uy3")
+animation = &"idle_down"
+
+[node name="CollisionRayCast_1" type="RayCast2D" parent="."]
+position = Vector2(8, 8)
+target_position = Vector2(0, 16)
+
+[node name="CollisionRayCast_2" type="RayCast2D" parent="."]
+position = Vector2(8, 8)
+target_position = Vector2(0, 16)

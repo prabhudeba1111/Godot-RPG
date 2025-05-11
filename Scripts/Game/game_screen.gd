@@ -5,7 +5,7 @@ extends Node
 
 
 func _ready() -> void:
-	map.add_child(load(GameManager.currentMapPath).instantiate())
+	CommandDispatcher.load_map.emit(GameManager.defaultMapPath, null, Map.Directions.North)
 	CommandDispatcher.wait_for_command.emit()
 
 
