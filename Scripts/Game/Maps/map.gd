@@ -4,8 +4,38 @@ extends TileMapLayer
 enum Directions {North, East, West, South}
 
 @export var default_player_start_position :Vector2i
+@export var step_inrcement: float = 1.0
+
 
 var player
+
+
+func _ready() -> void:
+	CommandDispatcher.player_move.connect(_on_player_move)
+
+
+func _on_player_move(direction) -> void:
+	var newPos = Vector2(player.position)
+	var moveIncrement = tile_set.tile_size.x * step_inrcement
+	
+	match direction:
+		Directions.North:
+			newPos.y -= moveIncrement
+		Directions.East:
+			newPos.x += moveIncrement
+		Directions.West:
+			newPos.x -= moveIncrement
+		Directions.South:
+			newPos.y += moveIncrement
+	
+	if player_can_move_to(newPos):
+		player.position = newPos
+		player.updateAnimation(direction)
+
+
+func player_can_move_to(position :Vector2) -> bool:
+	return false
+
 
 func spawn_player_at_position(position, facing):
 	var spawn_position :Vector2i
