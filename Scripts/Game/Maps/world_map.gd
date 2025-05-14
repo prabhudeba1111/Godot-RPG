@@ -16,5 +16,5 @@ func player_can_move_to(pos : Vector2) -> bool:
 		get_terrain_data_for_tile(0, "TerrainType", cast_cell_2.x, cast_cell_2.y) != "Ocean"):
 		return true
 	else:
-		CommandDispatcher.display_message.emit("Your Path is Blocked.\n")
+		CommandDispatcher.display_message.emit("Your Path is Blocked.")
 		return false

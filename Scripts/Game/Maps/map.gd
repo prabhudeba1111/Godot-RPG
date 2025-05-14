@@ -12,7 +12,9 @@ var player
 
 func _ready() -> void:
 	CommandDispatcher.player_move.connect(_on_player_move)
-
+	
+	if get_node("Entities") == null:
+		printerr("No entities layer in map")
 
 func _on_player_move(direction) -> void:
 	var newPos = Vector2(player.position)

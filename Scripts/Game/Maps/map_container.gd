@@ -1,7 +1,5 @@
 extends Node
 
-@export var entities : Node
-
 var map
 
 func _ready() -> void:
@@ -17,7 +15,7 @@ func load_map(newMapPath :String, spawnPoint, facing) -> void:
 	map = load(newMapPath).instantiate()
 	
 	add_child(map)
-	entities.add_child(map.spawn_player_at_position(spawnPoint, facing))
+	map.get_node("Entities").add_child(map.spawn_player_at_position(spawnPoint, facing))
 	
 	GameManager.currentMapPath = newMapPath
 	CommandDispatcher.wait_for_command.emit()

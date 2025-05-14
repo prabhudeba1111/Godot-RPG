@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7b40y10f6u5e"]
+
+[ext_resource type="PackedScene" uid="uid://bup8bxb0dbvln" path="res://Scenes/Game/Maps/map_entity.tscn" id="1_fftgt"]
+[ext_resource type="Script" uid="uid://cjjghyi6elmcr" path="res://Scripts/Game/Maps/change_map_trigger.gd" id="2_1ogwk"]
+
+[node name="ChangeMapTrigger" instance=ExtResource("1_fftgt")]
+script = ExtResource("2_1ogwk")
+map = null
+spawnPoint = Vector2i(320, 144)
+facing = 0

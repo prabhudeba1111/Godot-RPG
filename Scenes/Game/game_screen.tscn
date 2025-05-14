@@ -92,9 +92,8 @@ canvas_item_default_texture_filter = 0
 size = Vector2i(493, 235)
 render_target_update_mode = 4
 
-[node name="MapContainer" type="Node" parent="UI/MapViewport/SubViewport" node_paths=PackedStringArray("entities")]
+[node name="MapContainer" type="Node" parent="UI/MapViewport/SubViewport"]
 script = ExtResource("3_2aihf")
-entities = NodePath("Entities")
 
 [node name="Entities" type="Node2D" parent="UI/MapViewport/SubViewport/MapContainer"]
 z_index = 1

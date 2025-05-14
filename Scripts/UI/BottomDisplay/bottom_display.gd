@@ -32,7 +32,7 @@ func _clear_window() -> void:
 
 func display_message(message :String) -> void:
 	var messageLine = messageLinePreload.instantiate()
-	messageLine.text = "%s\n" % message
+	messageLine.text = "%s\n\n" % message
 	messages.add_child(messageLine)
 	scroll_to_end()
 
