@@ -30,17 +30,17 @@ func _on_player_move(direction) -> void:
 	
 	if player_can_move_to(newPos):
 		player.position = newPos
-		player.updateAnimation(direction)
+		player.update_animation(direction)
 
 
-func player_can_move_to(position :Vector2) -> bool:
+func player_can_move_to(pos :Vector2) -> bool:
 	return false
 
 
-func spawn_player_at_position(position, facing):
+func spawn_player_at_position(pos, facing):
 	var spawn_position :Vector2i
-	if position:
-		spawn_position = position
+	if pos:
+		spawn_position = pos
 	else:
 		spawn_position = default_player_start_position
 	

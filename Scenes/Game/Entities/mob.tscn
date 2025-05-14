@@ -126,8 +126,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Mob" type="Node2D"]
+[node name="Mob" type="Node2D" node_paths=PackedStringArray("animator", "collisionRay_1", "collisionRay_2")]
 script = ExtResource("1_epucs")
+animator = NodePath("AnimatedSprite2D")
+collisionRay_1 = NodePath("CollisionRayCast_1")
+collisionRay_2 = NodePath("CollisionRayCast_2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, 8)

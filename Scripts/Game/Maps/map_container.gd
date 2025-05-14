@@ -22,9 +22,8 @@ func load_map(newMapPath :String, spawnPoint, facing) -> void:
 	GameManager.currentMapPath = newMapPath
 	CommandDispatcher.wait_for_command.emit()
 
-
-func _unhandled_key_input(event: InputEvent) -> void:
-	var direction
+func _unhandled_key_input(_event: InputEvent) -> void:
+	var direction = null
 	
 	if Input.is_action_pressed("ui_up"):
 		direction = Map.Directions.North
@@ -35,5 +34,5 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if Input.is_action_pressed("ui_down"):
 		direction = Map.Directions.South
 	
-	if direction:
+	if direction != null:
 		CommandDispatcher.process_command.emit(MoveCommand.new(direction))

@@ -9,7 +9,7 @@ func _init(dir) -> void:
 
 func execute() -> void:
 	CommandDispatcher.player_move.emit(direction)
-	command_processed.emit()
+	command_processed.emit(get_command_text())
 
 func get_direction() -> String:
 	return Map.Directions.keys()[direction]

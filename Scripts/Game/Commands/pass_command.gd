@@ -7,4 +7,4 @@ func _init() -> void:
 
 
 func execute() -> void:
-	command_processed.emit(commandLabel)
+	command_processed.emit(get_command_text())

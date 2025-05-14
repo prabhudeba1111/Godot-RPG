@@ -9,18 +9,12 @@
 
 [node name="Game" type="Node" node_paths=PackedStringArray("map")]
 script = ExtResource("1_kye4h")
-map = NodePath("MapContainer")
+map = NodePath("UI/MapViewport/SubViewport/MapContainer")
 
 [node name="CommandProcessor" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
 script = ExtResource("2_3nf1g")
-
-[node name="MapContainer" type="Node" parent="." node_paths=PackedStringArray("entities")]
-script = ExtResource("3_2aihf")
-entities = NodePath("Entities")
-
-[node name="Entities" type="Node" parent="MapContainer"]
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -83,6 +77,27 @@ horizontal_scroll_mode = 0
 [node name="Messages" type="VBoxContainer" parent="UI/BottomDisplay/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="MapViewport" type="SubViewportContainer" parent="UI"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 15.0
+offset_right = 627.0
+offset_bottom = 250.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="UI/MapViewport"]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(493, 235)
+render_target_update_mode = 4
+
+[node name="MapContainer" type="Node" parent="UI/MapViewport/SubViewport" node_paths=PackedStringArray("entities")]
+script = ExtResource("3_2aihf")
+entities = NodePath("Entities")
+
+[node name="Entities" type="Node2D" parent="UI/MapViewport/SubViewport/MapContainer"]
+z_index = 1
 
 [connection signal="broadcast_command" from="CommandProcessor" to="UI/BottomDisplay" method="_on_command"]
 [connection signal="timeout" from="CommandProcessor" to="CommandProcessor" method="_on_timeout"]

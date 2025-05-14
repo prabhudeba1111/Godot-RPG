@@ -3,6 +3,8 @@ extends Map
 
 func _ready() -> void:
 	print(get_terrain_data_for_tile(0, "TerrainType", 6, 6))
+	
+	super._ready()
 
 
 func get_terrain_data_for_tile(layer, data, x, y):
@@ -14,9 +16,9 @@ func get_terrain_data_for_tile(layer, data, x, y):
 		return null
 
 
-func spawn_player_at_position(position, facing):
+func spawn_player_at_position(pos, facing):
 	player = load("res://Scenes/Game/Entities/player.tscn").instantiate()
 	
-	super.spawn_player_at_position(position, facing)
+	super.spawn_player_at_position(pos, facing)
 	
 	return player

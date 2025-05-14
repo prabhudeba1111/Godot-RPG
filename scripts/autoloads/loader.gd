@@ -12,7 +12,7 @@ func load_scene(caller, path) -> void:
 	ResourceLoader.load_threaded_request(scenePath)
 	caller.queue_free()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if scenePath:
 		var progress :Array[float] = []
 		var loaderStatus = ResourceLoader.load_threaded_get_status(scenePath, progress)
