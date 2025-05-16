@@ -47,3 +47,5 @@ func spawn_player_at_position(pos, facing):
 		spawn_position = default_player_start_position
 	
 	player.position = Vector2(spawn_position.x + 16, spawn_position.y + 16)
+	
+	get_node("Entities").add_child(player)

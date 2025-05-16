@@ -12,7 +12,7 @@ func _ready() -> void:
 	player.animator.sprite_frames.set_animation_loop("walk_down", true)
 
 
-func _load_map(map, spawnPoint, facing) -> void:
+func _load_map(_map, _spawnPoint, _facing) -> void:
 	player.animator.play("walk_down")
 	show()
 
