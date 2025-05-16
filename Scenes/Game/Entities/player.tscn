@@ -3,8 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://ditrjvwlufaee" path="res://Scenes/Game/Entities/mob.tscn" id="1_5omxp"]
 [ext_resource type="Script" uid="uid://bdvxiqc46vlev" path="res://Scripts/Game/Entities/player.gd" id="2_ej8la"]
 
-[node name="Player" instance=ExtResource("1_5omxp")]
+[node name="Player" node_paths=PackedStringArray("camera") instance=ExtResource("1_5omxp")]
 script = ExtResource("2_ej8la")
+camera = NodePath("Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="." index="3"]
 zoom = Vector2(1.5, 1.5)

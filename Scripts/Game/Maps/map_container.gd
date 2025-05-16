@@ -1,6 +1,9 @@
 extends Node
 
-var map
+var map : Map
+var loading : bool
+var newSpawnPoint
+var newFacing
 
 func _ready() -> void:
 	CommandDispatcher.load_map.connect(load_map)
@@ -12,13 +15,37 @@ func load_map(newMapPath :String, spawnPoint, facing) -> void:
 	if map:
 		map.queue_free()
 	
-	map = load(newMapPath).instantiate()
-	
-	add_child(map)
-	map.get_node("Entities").add_child(map.spawn_player_at_position(spawnPoint, facing))
+	loading = true
 	
 	GameManager.currentMapPath = newMapPath
-	CommandDispatcher.wait_for_command.emit()
+	
+	ResourceLoader.load_threaded_request(GameManager.currentMapPath)
+	
+	newFacing = facing
+	newSpawnPoint = spawnPoint
+	
+	
+	#map = load(newMapPath).instantiate()
+	#
+	#add_child(map)
+	#map.get_node("Entities").add_child(map.spawn_player_at_position(spawnPoint, facing))
+	#
+	#GameManager.currentMapPath = newMapPath
+	#CommandDispatcher.wait_for_command.emit()
+
+
+func _process(delta: float) -> void:
+	if loading:
+		if ResourceLoader.load_threaded_get_status(GameManager.currentMapPath) == ResourceLoader.THREAD_LOAD_LOADED:
+			
+			
+			map = ResourceLoader.load_threaded_get(GameManager.currentMapPath).instantiate()
+			call_deferred("add_child", map)
+			
+			map.spawn_player_at_position(newSpawnPoint, newFacing)
+			loading = false
+			CommandDispatcher.load_complete.emit()
+			CommandDispatcher.wait_for_command.emit()
 
 func _unhandled_key_input(_event: InputEvent) -> void:
 	var direction = null

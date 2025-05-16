@@ -10,4 +10,5 @@ signal display_message(message)
 signal display_command_prompt
 signal display_clear
 
-signal load_map(currentMap, newMapPath, spawnPoint, facing)
+signal load_map(newMapPath, spawnPoint, facing)
+signal load_complete

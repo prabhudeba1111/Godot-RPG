@@ -5,8 +5,7 @@ extends Node
 
 
 func _ready() -> void:
-	CommandDispatcher.load_map.emit(GameManager.defaultMapPath, null, Map.Directions.North)
-	CommandDispatcher.wait_for_command.emit()
+	CommandDispatcher.load_map.emit(GameManager.currentMapPath, null, Map.Directions.North)
 
 
 func _on_pass_button_pressed() -> void:
