@@ -15,6 +15,7 @@ config/version="0.0.3"
 run/main_scene="uid://t1metu5g6myl"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+config/tags=PackedStringArray("questor", "top_down")
 
 [autoload]
 
