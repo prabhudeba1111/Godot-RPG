@@ -23,15 +23,6 @@ func load_map(newMapPath :String, spawnPoint, facing) -> void:
 	
 	newFacing = facing
 	newSpawnPoint = spawnPoint
-	
-	
-	#map = load(newMapPath).instantiate()
-	#
-	#add_child(map)
-	#map.get_node("Entities").add_child(map.spawn_player_at_position(spawnPoint, facing))
-	#
-	#GameManager.currentMapPath = newMapPath
-	#CommandDispatcher.wait_for_command.emit()
 
 
 func _process(delta: float) -> void:
