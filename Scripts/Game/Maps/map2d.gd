@@ -16,4 +16,6 @@ func spawn_player_at_position(pos, facing):
 	
 	super.spawn_player_at_position(pos, facing)
 	
+	player.update_facing(facing)
+	
 	return player

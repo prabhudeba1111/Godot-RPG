@@ -17,3 +17,4 @@ metadata/_custom_type_script = "uid://sc6h67mmfkhf"
 position = Vector2(128, 112)
 map = "uid://bxraeivglxv4d"
 spawnPoint = Vector2i(144, 144)
+facing = 3

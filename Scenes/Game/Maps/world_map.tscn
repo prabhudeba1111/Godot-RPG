@@ -14,6 +14,13 @@ step_inrcement = 0.5
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="ChangeMapTrigger" parent="Entities" instance=ExtResource("3_hum72")]
-position = Vector2(352, 160)
+position = Vector2(528, 224)
 map = "uid://crbbuv0t5s74n"
 spawnPoint = Vector2i(80, 144)
+facing = 1
+
+[node name="ChangeMapTrigger2" parent="Entities" instance=ExtResource("3_hum72")]
+position = Vector2(352, 160)
+map = "uid://dlmdpx04g205w"
+spawnPoint = Vector2i(0, 176)
+facing = 1

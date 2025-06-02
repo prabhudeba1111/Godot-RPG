@@ -49,3 +49,19 @@ func update_animation(direction) -> void:
 			animator.frame = 0
 		else:
 			animator.frame += 1
+
+func update_facing(direction) -> void:
+	var sequence
+	
+	match direction:
+		Map.Directions.North:
+			sequence = "idle_up"
+		Map.Directions.East:
+			sequence = "idle_right"
+		Map.Directions.West:
+			sequence = "idle_left"
+		Map.Directions.South:
+			sequence = "idle_down"
+			
+	animator.animation = sequence
+	animator.frame = 0
