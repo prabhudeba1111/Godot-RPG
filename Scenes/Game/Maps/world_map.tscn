@@ -22,5 +22,5 @@ facing = 1
 [node name="ChangeMapTrigger2" parent="Entities" instance=ExtResource("3_hum72")]
 position = Vector2(352, 160)
 map = "uid://dlmdpx04g205w"
-spawnPoint = Vector2i(0, 176)
+spawnPoint = Vector2i(-16, 176)
 facing = 1
